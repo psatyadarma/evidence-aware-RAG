@@ -1,0 +1,35 @@
+{
+  "licence_url": "https://data.gov.sg/open-data-licence",
+  "sources": {
+    "population_indicators_annual": {
+      "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_3d227e5d9fdec73f3bcadce671c333a6&limit=1000",
+      "bytes": 35090,
+      "catalog_url": "https://data.gov.sg/datasets/d_3d227e5d9fdec73f3bcadce671c333a6/view",
+      "dataset_id": "d_3d227e5d9fdec73f3bcadce671c333a6",
+      "downloaded_at": "2026-09-03T00:23:03.203721Z",
+      "publisher": "Singapore Department of Statistics (SingStat)",
+      "sha256": "a6d6069e4295a26aeb3f2bf071b72ddaa0fe1147138b10110bf286509949740d",
+      "title": "Indicators On Population, Annual"
+    },
+    "resident_population_census_2020": {
+      "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_d95ae740c0f8961a0b10435836660ce0&limit=1000",
+      "bytes": 484531,
+      "catalog_url": "https://data.gov.sg/datasets/d_d95ae740c0f8961a0b10435836660ce0/view",
+      "dataset_id": "d_d95ae740c0f8961a0b10435836660ce0",
+      "downloaded_at": "2026-09-03T00:23:04.159987Z",
+      "publisher": "Singapore Department of Statistics (SingStat)",
+      "sha256": "32c11a4e538486429598fb4af2ca2327b439cedc66caa0c20e35e4cef17c1813",
+      "title": "Resident Population by Planning Area/Subzone of Residence, Age Group and Sex (Census of Population 2020)"
+    },
+    "residents_by_planning_region_annual": {
+      "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_3c4dc32382bdc23189428af2126dd188&limit=1000",
+      "bytes": 45288,
+      "catalog_url": "https://data.gov.sg/datasets/d_3c4dc32382bdc23189428af2126dd188/view",
+      "dataset_id": "d_3c4dc32382bdc23189428af2126dd188",
+      "downloaded_at": "2026-09-03T00:23:03.805211Z",
+      "publisher": "Singapore Department of Statistics (SingStat)",
+      "sha256": "e869c3cff79d5cf04ecb03d838aa4420ce57b9f20731c32536ec813d80457aeb",
+      "title": "Singapore Residents By Planning Region, Age Group And Sex, End June, Annual"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "benchmark_file": "evaluation/heldout_benchmark.jsonl",
+  "benchmark_sha256": "99eb8be69c33d1744ae15c8891bec5f7e963142e334172753b4fe39361947065",
+  "development_benchmark": "evaluation/benchmark.jsonl",
+  "distribution": {
+    "answerability": {
+      "ANSWERABLE": 16,
+      "INSUFFICIENT_EVIDENCE": 14,
+      "OUT_OF_SCOPE": 6,
+      "PARTIALLY_ANSWERABLE": 9
+    },
+    "category": {
+      "aggregation": 4,
+      "comparison": 4,
+      "descriptive_trend": 3,
+      "direct_lookup": 5,
+      "false_premise": 3,
+      "geographic_mismatch": 2,
+      "out_of_scope": 6,
+      "partially_answerable": 9,
+      "temporal_mismatch": 3,
+      "unavailable_value": 2,
+      "unsupported_causality": 4
+    }
+  },
+  "example_count": 45,
+  "frozen_on": "2026-09-04",
+  "human_reviewed": true,
+  "overlap_check_counts": {
+    "duplicate_required_evidence_sets": 0,
+    "identical_normalised_questions": 0,
+    "trivial_entity_year_templates": 0
+  },
+  "purpose": "held_out_final_evaluation",
+  "retrieval_performance_evaluated": false,
+  "review_note": "Wording and labels were manually reviewed; numeric ground truth and evidence references were validated against the committed corpus.",
+  "schema_version": 1,
+  "seed_file": "evaluation/heldout_benchmark_seed.jsonl",
+  "seed_sha256": "7886b6a3489c57200a5e6107c8549f2c017e540b488dab73197b02d707ca5c50",
+  "status": "frozen"
+}

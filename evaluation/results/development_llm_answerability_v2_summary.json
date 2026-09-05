@@ -1,0 +1,234 @@
+{
+  "actual_models": [
+    "gpt-4.1-mini-2025-04-14"
+  ],
+  "classification_derivation": "deterministic_from_requested_claims_v2",
+  "comparison": {
+    "both_correct": 18,
+    "both_incorrect": 0,
+    "deterministic_only_correct": 7,
+    "llm_only_correct": 0
+  },
+  "cost_and_latency": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.0311004,
+    "input_tokens": 54143,
+    "latency_sample_count": 28,
+    "mean_latency_ms": 3376.817221428571,
+    "median_latency_ms": 3367.5849,
+    "output_tokens": 5902,
+    "pricing_as_of": "2026-09-05",
+    "pricing_url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "total_provider_calls": 28
+  },
+  "deterministic": {
+    "accuracy": 1.0,
+    "failure_count": 0,
+    "macro_f1": 1.0,
+    "per_class": {
+      "ANSWERABLE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 10
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 10
+      },
+      "OUT_OF_SCOPE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 2
+      },
+      "PARTIALLY_ANSWERABLE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 3
+      }
+    },
+    "successful_prediction_count": 25
+  },
+  "errors": [
+    {
+      "error_category": "source_caveat_failure",
+      "failure_category": null,
+      "ground_truth_label": "PARTIALLY_ANSWERABLE",
+      "id": "q013",
+      "llm_cited_evidence_ids": [
+        "residents_by_planning_region_annual:r241:y2019",
+        "residents_by_planning_region_annual:r241:y2020"
+      ],
+      "llm_derived_prediction": "ANSWERABLE",
+      "llm_reason_codes": [
+        "EVIDENCE_COMPLETE"
+      ],
+      "model_failure": null
+    },
+    {
+      "error_category": "unsupported_causality_acceptance",
+      "failure_category": null,
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q016",
+      "llm_cited_evidence_ids": [
+        "resident_population_census_2020:r323:y2020:age_group=total:sex=female",
+        "resident_population_census_2020:r323:y2020:age_group=total:sex=male"
+      ],
+      "llm_derived_prediction": "PARTIALLY_ANSWERABLE",
+      "llm_reason_codes": [
+        "EVIDENCE_COMPLETE",
+        "CAUSAL_EVIDENCE_MISSING"
+      ],
+      "model_failure": null
+    },
+    {
+      "error_category": "claim_decomposition_failure",
+      "failure_category": null,
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q017",
+      "llm_cited_evidence_ids": [],
+      "llm_derived_prediction": "OUT_OF_SCOPE",
+      "llm_reason_codes": [
+        "OUT_OF_DOMAIN_ATTRIBUTE"
+      ],
+      "model_failure": null
+    },
+    {
+      "error_category": "evidence_relation_failure",
+      "failure_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q018",
+      "llm_cited_evidence_ids": [],
+      "llm_derived_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceAssessmentV2\nrequested_claims.0\n  Value error, UNAVAILABLE claims require evidence establishing unavailability [type=value_error, input_value={'claim': 'Number of resi...f the relevant corpus.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "claim_decomposition_failure",
+      "failure_category": null,
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q020",
+      "llm_cited_evidence_ids": [],
+      "llm_derived_prediction": "OUT_OF_SCOPE",
+      "llm_reason_codes": [
+        "OUT_OF_DOMAIN_ATTRIBUTE"
+      ],
+      "model_failure": null
+    },
+    {
+      "error_category": "evidence_relation_failure",
+      "failure_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q021",
+      "llm_cited_evidence_ids": [],
+      "llm_derived_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceAssessmentV2\nrequested_claims.0\n  Value error, only SUPPORTED claims may use SUPPORTS evidence [type=value_error, input_value={'claim': \"Singapore's re...g the claim of a fall.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "evidence_relation_failure",
+      "failure_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q022",
+      "llm_cited_evidence_ids": [],
+      "llm_derived_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 2 validation errors for LlmEvidenceAssessmentV2\nrequested_claims.0\n  Value error, only SUPPORTED claims may use SUPPORTS evidence [type=value_error, input_value={'claim': 'Yishun had mor...opulation differences.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error\npremises.0\n  Value error, CONTRADICTED premises require CONTRADICTS evidence [type=value_error, input_value={'premise': 'Yishun had m...radicting the premise.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    }
+  ],
+  "evaluation_split": "development",
+  "example_count": 25,
+  "generation_parameters": {
+    "max_attempts": 2,
+    "max_output_tokens": 1000,
+    "temperature": 0.0
+  },
+  "llm_v2": {
+    "abstention": {
+      "model_failures_are_not_counted_as_abstentions": true,
+      "precision": 1.0,
+      "predicted_abstentions": 8,
+      "recall": 0.6666666666666666,
+      "required_abstentions": 12,
+      "true_positives": 8
+    },
+    "accuracy": 0.72,
+    "confusion_matrix": {
+      "ANSWERABLE": {
+        "ANSWERABLE": 10,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "MODEL_FAILURE": 0,
+        "OUT_OF_SCOPE": 0,
+        "PARTIALLY_ANSWERABLE": 0
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "ANSWERABLE": 0,
+        "INSUFFICIENT_EVIDENCE": 4,
+        "MODEL_FAILURE": 3,
+        "OUT_OF_SCOPE": 2,
+        "PARTIALLY_ANSWERABLE": 1
+      },
+      "OUT_OF_SCOPE": {
+        "ANSWERABLE": 0,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "MODEL_FAILURE": 0,
+        "OUT_OF_SCOPE": 2,
+        "PARTIALLY_ANSWERABLE": 0
+      },
+      "PARTIALLY_ANSWERABLE": {
+        "ANSWERABLE": 1,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "MODEL_FAILURE": 0,
+        "OUT_OF_SCOPE": 0,
+        "PARTIALLY_ANSWERABLE": 2
+      }
+    },
+    "failure_count": 3,
+    "macro_f1": 0.7142857142857143,
+    "per_class": {
+      "ANSWERABLE": {
+        "f1": 0.9523809523809523,
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "support": 10
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "f1": 0.5714285714285715,
+        "precision": 1.0,
+        "recall": 0.4,
+        "support": 10
+      },
+      "OUT_OF_SCOPE": {
+        "f1": 0.6666666666666666,
+        "precision": 0.5,
+        "recall": 1.0,
+        "support": 2
+      },
+      "PARTIALLY_ANSWERABLE": {
+        "f1": 0.6666666666666666,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "support": 3
+      }
+    },
+    "successful_prediction_count": 22
+  },
+  "prompt_hash": "1e616f05cee98b98276432521969fad9fe0c5d034004a8d916dd5969e2b03b1a",
+  "prompt_version": "evidence_sufficiency_zero_shot_v2",
+  "provider": "openai",
+  "requested_model": "gpt-4.1-mini-2025-04-14",
+  "result_status": "completed_with_failures"
+}

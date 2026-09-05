@@ -10,10 +10,11 @@ from app.models import (
     BenchmarkExample,
     Document,
     DocumentMetadata,
-    Evidence,
     GeneratedAnswer,
+    ObservationStatus,
     RequiredClaim,
     RetrievalResult,
+    RetrievalUnit,
     TemporalCoverage,
 )
 
@@ -32,12 +33,18 @@ def metadata() -> DocumentMetadata:
 
 def test_document_and_retrieval_result_round_trip(metadata: DocumentMetadata) -> None:
     document = Document(document_id="doc-1", content="Population: 100", metadata=metadata)
-    evidence = Evidence(
+    evidence = RetrievalUnit(
         evidence_id="evidence-1",
-        document_id=document.document_id,
+        document_id="source:r1",
+        source_id="source",
+        record_id=1,
+        year=2025,
         text=document.content,
+        value=100,
+        raw_value="100",
+        status=ObservationStatus.OBSERVED,
+        dimensions={"series": "Population"},
         metadata=document.metadata,
-        location="row 1",
     )
     result = RetrievalResult(
         evidence=evidence,
@@ -51,10 +58,17 @@ def test_document_and_retrieval_result_round_trip(metadata: DocumentMetadata) ->
 
 @pytest.mark.parametrize("score", [float("inf"), float("-inf"), float("nan")])
 def test_retrieval_score_must_be_finite(metadata: DocumentMetadata, score: float) -> None:
-    evidence = Evidence(
+    evidence = RetrievalUnit(
         evidence_id="evidence-1",
-        document_id="doc-1",
+        document_id="source:r1",
+        source_id="source",
+        record_id=1,
+        year=2025,
         text="Population: 100",
+        value=100,
+        raw_value="100",
+        status=ObservationStatus.OBSERVED,
+        dimensions={"series": "Population"},
         metadata=metadata,
     )
 
@@ -113,4 +127,3 @@ def test_answerable_benchmark_requires_expected_answer() -> None:
 def test_unknown_fields_are_rejected() -> None:
     with pytest.raises(ValidationError, match="Extra inputs"):
         TemporalCoverage(start="2020", undocumented_field="hidden heuristic")
-

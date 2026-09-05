@@ -24,8 +24,11 @@ class Settings(BaseSettings):
     retrieval_top_k: int = Field(default=5, ge=1)
     retrieval_threshold: Optional[float] = None
     model_provider: str = Field(default="openai", min_length=1)
-    model_name: str = Field(default="gpt-4.1-mini", min_length=1)
+    model_name: str = Field(default="gpt-4.1-mini-2025-04-14", min_length=1)
     model_api_key: Optional[SecretStr] = None
+    model_timeout_seconds: float = Field(default=60.0, gt=0.0, le=300.0)
+    model_max_attempts: int = Field(default=2, ge=1, le=3)
+    model_max_output_tokens: int = Field(default=1000, ge=100, le=5000)
 
     @field_validator("retrieval_threshold")
     @classmethod

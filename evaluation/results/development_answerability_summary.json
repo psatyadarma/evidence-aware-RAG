@@ -1,0 +1,67 @@
+{
+  "abstention": {
+    "precision": 1.0,
+    "predicted_abstentions": 12,
+    "recall": 1.0,
+    "required_abstentions": 12,
+    "true_positives": 12
+  },
+  "accuracy": 1.0,
+  "confusion_matrix": {
+    "ANSWERABLE": {
+      "ANSWERABLE": 10,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "OUT_OF_SCOPE": 0,
+      "PARTIALLY_ANSWERABLE": 0
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "ANSWERABLE": 0,
+      "INSUFFICIENT_EVIDENCE": 10,
+      "OUT_OF_SCOPE": 0,
+      "PARTIALLY_ANSWERABLE": 0
+    },
+    "OUT_OF_SCOPE": {
+      "ANSWERABLE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "OUT_OF_SCOPE": 2,
+      "PARTIALLY_ANSWERABLE": 0
+    },
+    "PARTIALLY_ANSWERABLE": {
+      "ANSWERABLE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "OUT_OF_SCOPE": 0,
+      "PARTIALLY_ANSWERABLE": 3
+    }
+  },
+  "error_count": 0,
+  "errors": [],
+  "evaluation_split": "development",
+  "example_count": 25,
+  "macro_f1": 1.0,
+  "per_class": {
+    "ANSWERABLE": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 10
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 10
+    },
+    "OUT_OF_SCOPE": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 2
+    },
+    "PARTIALLY_ANSWERABLE": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 3
+    }
+  }
+}

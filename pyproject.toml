@@ -9,8 +9,10 @@ description = "Evaluation-first RAG with explicit evidence sufficiency checks"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
+    "numpy==2.0.2",
     "pydantic>=2.7,<3",
     "pydantic-settings>=2.2,<3",
+    "sentence-transformers==3.4.1",
 ]
 
 [project.optional-dependencies]
@@ -24,4 +26,3 @@ addopts = "-q"
 
 [tool.setuptools.packages.find]
 include = ["app*", "evaluation*"]
-

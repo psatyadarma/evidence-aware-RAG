@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "result": {
+    "resource_id": "fixture-indicator",
+    "fields": [
+      {"type": "text", "id": "DataSeries"},
+      {"type": "numeric", "id": "2021"},
+      {"type": "text", "id": "2020"},
+      {"type": "int4", "id": "_id"}
+    ],
+    "records": [
+      {"2020": "na", "2021": "123.5", "_id": 1, "DataSeries": "Example rate"}
+    ],
+    "total": 1,
+    "limit": 1000
+  }
+}

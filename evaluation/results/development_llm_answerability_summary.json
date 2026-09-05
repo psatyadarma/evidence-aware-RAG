@@ -1,0 +1,261 @@
+{
+  "actual_models": [
+    "gpt-4.1-mini-2025-04-14"
+  ],
+  "comparison": {
+    "both_correct": 15,
+    "both_incorrect": 0,
+    "deterministic_only_correct": 10,
+    "llm_only_correct": 0
+  },
+  "cost_and_latency": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.031918800000000004,
+    "input_tokens": 53845,
+    "latency_sample_count": 34,
+    "mean_latency_ms": 3136.4029117647074,
+    "median_latency_ms": 2974.73225,
+    "output_tokens": 6488,
+    "pricing_as_of": "2026-09-05",
+    "pricing_url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "total_provider_calls": 34
+  },
+  "deterministic": {
+    "accuracy": 1.0,
+    "failure_count": 0,
+    "macro_f1": 1.0,
+    "per_class": {
+      "ANSWERABLE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 10
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 10
+      },
+      "OUT_OF_SCOPE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 2
+      },
+      "PARTIALLY_ANSWERABLE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 3
+      }
+    },
+    "successful_prediction_count": 25
+  },
+  "errors": [
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "PARTIALLY_ANSWERABLE",
+      "id": "q011",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceSufficiencyDecision\n  Value error, INSUFFICIENT_EVIDENCE cannot contain supported claims [type=value_error, input_value={'classification': 'INSUF... descriptive evidence.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "PARTIALLY_ANSWERABLE",
+      "id": "q012",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceSufficiencyDecision\n  Value error, INSUFFICIENT_EVIDENCE cannot contain supported claims [type=value_error, input_value={'classification': 'INSUF... of growth since 2015.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "failed_partial_decomposition",
+      "ground_truth_label": "PARTIALLY_ANSWERABLE",
+      "id": "q013",
+      "llm_cited_evidence_ids": [
+        "residents_by_planning_region_annual:r241:y2019",
+        "residents_by_planning_region_annual:r241:y2020"
+      ],
+      "llm_prediction": "ANSWERABLE",
+      "llm_reason_codes": [
+        "EVIDENCE_COMPLETE"
+      ],
+      "model_failure": null
+    },
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q014",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceSufficiencyDecision\nclaims.0\n  Value error, only supported claims may cite supporting evidence IDs [type=value_error, input_value={'claim': \"Explain why Si...he population decline.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q015",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceSufficiencyDecision\nclaims.0\n  Value error, only supported claims may cite supporting evidence IDs [type=value_error, input_value={'claim': 'Explain increa... cannot be determined.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q016",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceSufficiencyDecision\n  Value error, INSUFFICIENT_EVIDENCE cannot contain supported claims [type=value_error, input_value={'classification': 'INSUF...e than male residents.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q019",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceSufficiencyDecision\nclaims.0\n  Value error, only supported claims may cite supporting evidence IDs [type=value_error, input_value={'claim': 'Bedok resident...ermine annual changes.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q021",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceSufficiencyDecision\nclaims.0\n  Value error, only supported claims may cite supporting evidence IDs [type=value_error, input_value={'claim': \"Singapore's re...se of a fall is false.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q022",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 1 validation error for LlmEvidenceSufficiencyDecision\nclaims.0\n  Value error, only supported claims may cite supporting evidence IDs [type=value_error, input_value={'claim': 'Yishun had mor...radicting the premise.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    },
+    {
+      "error_category": "structured_output_failure",
+      "ground_truth_label": "INSUFFICIENT_EVIDENCE",
+      "id": "q025",
+      "llm_cited_evidence_ids": [],
+      "llm_prediction": null,
+      "llm_reason_codes": [],
+      "model_failure": {
+        "error_type": "OutputValidationError",
+        "message": "schema-invalid structured output: 2 validation errors for LlmEvidenceSufficiencyDecision\nclaims.0\n  Value error, only supported claims may cite supporting evidence IDs [type=value_error, input_value={'claim': 'Resident popul...LABLE in the evidence.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error\nclaims.1\n  Value error, only supported claims may cite supporting evidence IDs [type=value_error, input_value={'claim': 'Resident popul...LABLE in the evidence.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      }
+    }
+  ],
+  "evaluation_split": "development",
+  "example_count": 25,
+  "generation_parameters": {
+    "max_attempts": 2,
+    "max_output_tokens": 1000,
+    "temperature": 0.0
+  },
+  "llm": {
+    "abstention": {
+      "model_failures_are_not_counted_as_abstentions": true,
+      "precision": 1.0,
+      "predicted_abstentions": 5,
+      "recall": 0.4166666666666667,
+      "required_abstentions": 12,
+      "true_positives": 5
+    },
+    "accuracy": 0.6,
+    "confusion_matrix": {
+      "ANSWERABLE": {
+        "ANSWERABLE": 10,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "MODEL_FAILURE": 0,
+        "OUT_OF_SCOPE": 0,
+        "PARTIALLY_ANSWERABLE": 0
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "ANSWERABLE": 0,
+        "INSUFFICIENT_EVIDENCE": 3,
+        "MODEL_FAILURE": 7,
+        "OUT_OF_SCOPE": 0,
+        "PARTIALLY_ANSWERABLE": 0
+      },
+      "OUT_OF_SCOPE": {
+        "ANSWERABLE": 0,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "MODEL_FAILURE": 0,
+        "OUT_OF_SCOPE": 2,
+        "PARTIALLY_ANSWERABLE": 0
+      },
+      "PARTIALLY_ANSWERABLE": {
+        "ANSWERABLE": 1,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "MODEL_FAILURE": 2,
+        "OUT_OF_SCOPE": 0,
+        "PARTIALLY_ANSWERABLE": 0
+      }
+    },
+    "failure_count": 9,
+    "macro_f1": 0.6034798534798534,
+    "per_class": {
+      "ANSWERABLE": {
+        "f1": 0.9523809523809523,
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "support": 10
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "f1": 0.4615384615384615,
+        "precision": 1.0,
+        "recall": 0.3,
+        "support": 10
+      },
+      "OUT_OF_SCOPE": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 2
+      },
+      "PARTIALLY_ANSWERABLE": {
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 3
+      }
+    },
+    "successful_prediction_count": 16
+  },
+  "prompt_hash": "993d98497b58700f9dc5bb0c6296bbccca762d5d66d54a8db0630c5e6a60670c",
+  "prompt_version": "evidence_sufficiency_zero_shot_v1",
+  "provider": "openai",
+  "requested_model": "gpt-4.1-mini-2025-04-14",
+  "result_status": "completed_with_failures"
+}

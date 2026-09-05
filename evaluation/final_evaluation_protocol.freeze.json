@@ -1,0 +1,223 @@
+{
+  "bge": {
+    "dimension": 384,
+    "document_prefix": "",
+    "dtype": "float32",
+    "model_id": "BAAI/bge-small-en-v1.5",
+    "model_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "normalized": true,
+    "query_prefix": "Represent this sentence for searching relevant passages:",
+    "threshold_score_formula": "max cosine(normalized query embedding, normalized embedding of each structured-retrieved evidence observation)"
+  },
+  "comparison_scope": {
+    "complete_policies": true,
+    "gate_level_comparison_also_reported": true,
+    "single_independent_variable_claim": false
+  },
+  "determinism": {
+    "bge_device": "cpu",
+    "bge_local_files_only": true,
+    "manual_prediction_corrections": 0,
+    "random_seed": 0,
+    "structured_retrieval": "deterministic",
+    "temperature": 0.0,
+    "threshold_comparison": "inclusive_greater_than_or_equal"
+  },
+  "explicit_statement": "The 45-question held-out benchmark has not yet been evaluated under this protocol.",
+  "frozen_artifacts": {
+    "app/answerability.py": "a828c9c6c037566463a64b7e49c3586254de84ab016c9d7c340b2658215eca5d",
+    "app/baseline_generation.py": "9f6b0d2a15984cf63c733f952b056db27479ef49344d96b63c587bc9c0d24faa",
+    "app/comparison_systems.py": "c241d2a8e00ada24d7bfb90167e6bfeb97e327e18cfd95afa14e31d57ec6b2b8",
+    "app/computation.py": "eb0f4ca1e1ad6d6a50ceeb27bcd4928c043a6dd909e5585dee2bc2ba131cf68c",
+    "app/evidence.py": "d51426e95248a18d010ed721284c4f5c605774d05ea7a3d9a841264e273e2606",
+    "app/generation.py": "d17d2a78408290c23ccf919dafd2719bc6f938d094c589eb58940b7e71f9ffea",
+    "app/ingestion.py": "85a87470cca100c3ff1155c522c7c769f7dbc8e8db55f3eec8910ee2777fb7e7",
+    "app/llm_answerability.py": "1dcfe18aa8302a0080bf276b5ff2754342eac03323dfa304ed1eb0cc1558d538",
+    "app/llm_answerability_v2.py": "eefd33e1d51de4b28c5f4e4b88a39d5617629e53de1af750825112d84f9b8ab4",
+    "app/models.py": "662126a0be09867388df86a7339618eacac82d23f1e1a7ba1a81da5ac4be81ad",
+    "app/pipeline.py": "9a098f10a52a0651079917f66257069a9b9728276e4bca8e0c2768a97842983f",
+    "app/providers/openai_responses.py": "af38143d2dfebd47b5f9161f1061f1b63e3427a8c7ca646e81e49e3f15179a6b",
+    "app/retrieval.py": "4efd16659eaf250e3ed6954ab9a357311f7074c1bfdf23d7161f4fe622e8b774",
+    "app/semantic_retrieval.py": "930ebe323532aad3bdbfe4d038c5ca29717d42ff96e2656444b5fb63ba686f8d",
+    "app/sources.py": "838402990c3e07079b86ac94236c4f8e32c7e4c63b8b2553bc02836767c492f4",
+    "app/structured_retrieval.py": "a7c33a26d6de6a5242f4be73f5f86cb056cad77fa748e482398c91a1b1c5554a",
+    "app/threshold_gate.py": "a0123d35c5f689bf1c56d8b723afa853fe14b6008a07905ea3fc0e9341da45d6",
+    "data/embeddings/bge-small-en-v1.5/embeddings.npy": "339bb4ba7ad7022e69fc6b605e686d9b7dd16dcab519419c3ef917f7ce0583a0",
+    "data/embeddings/bge-small-en-v1.5/evidence_ids.json": "51c9e1ed324ca0baa36f429f6f39d7b11a40592d7f4b7fae699f412f6df99053",
+    "data/embeddings/bge-small-en-v1.5/metadata.json": "5a98de5788280a5a0131119b8cbfe6a05db9a5894c9efc9de7613c6170c23670",
+    "data/processed/population_indicators_annual.jsonl": "832ad92a0fb93c641e183e72aa36f34c0aaecf30e858f3fa11bdc191f3a0d2ba",
+    "data/processed/resident_population_census_2020.jsonl": "f7cba6dd7e1bafe722f60f15bca6583a923db53ddd9c5c0e21f90ede7b48a440",
+    "data/processed/residents_by_planning_region_annual.jsonl": "3ba62e74be7dfd67829a4cbe7e7901d44d94fdd0fe568160ae611cf1a99506f8",
+    "data/raw/manifest.json": "3f1f5f92f2595fe4af35e7227f1e68aa53444494f5c6ed43f373eb7df5407025",
+    "data/raw/population_indicators_annual.json": "a6d6069e4295a26aeb3f2bf071b72ddaa0fe1147138b10110bf286509949740d",
+    "data/raw/resident_population_census_2020.json": "32c11a4e538486429598fb4af2ca2327b439cedc66caa0c20e35e4cef17c1813",
+    "data/raw/residents_by_planning_region_annual.json": "e869c3cff79d5cf04ecb03d838aa4420ce57b9f20731c32536ec813d80457aeb",
+    "evaluation/FINAL_EVALUATION_PROTOCOL.md": "35e654e9955032f474522ee7d7db0955f6d41af90ba796bfef03db915d67b32a",
+    "evaluation/benchmark.jsonl": "4ca69aa3cb6c2fcedf670fb839c6ae38db1d3011058e149c41696f11d014c081",
+    "evaluation/benchmark.py": "b604cbde30dce747808c00d783561590c9994ea879f7df0979c197da02463585",
+    "evaluation/final_protocol.py": "d17a878948f71246bb1e209ff44a4ba36e41eacc5f383b4c2e4beac3f80f3f1e",
+    "evaluation/generation_evaluation.py": "b975a11cf0d86a2fa63b70d7db61b52656e05bfbc505fca2ee623fa09f0c763d",
+    "evaluation/heldout_benchmark.freeze.json": "5368478a0bc9a68cbcc91b2e9b1f21eb462e1d852ee426b712b41d62a37210cc",
+    "evaluation/results/development_answerability_report.jsonl": "2f6dbd313579b44a8728ee8d8eafcae7dac0f46dc8a3e662fbc1df5e97febcf9",
+    "evaluation/results/development_answerability_summary.json": "7e9ac399cc06905ed4624dac89a645670c64f94cf1bdddc8d161df1d7244439e",
+    "evaluation/results/development_baseline_claim_audit_v1.json": "e92f9b9313b077f00229d2a6822400354a81c8ee48e2f5886cf2ccc96042e349",
+    "evaluation/results/development_grounded_generation_v1_error_analysis.json": "806a6b97250fe72cbd8261c9a9914c34da8d5fa0b224b8aa094129cab21458c7",
+    "evaluation/results/development_grounded_generation_v1_report.jsonl": "e96adea1c83db7c57593a640ea78d56258c1211544953638dc16845d774cc041",
+    "evaluation/results/development_grounded_generation_v1_summary.json": "172eea61083df7d496f08e9d4033f1c9ee6d8e49af65fbc841db27481b596200",
+    "evaluation/results/development_grounded_generation_v2_claim_audit.json": "e8707e85ed09f9a427976e0e2913469d9e2b1040adda941220fd1ab8a82344fc",
+    "evaluation/results/development_grounded_generation_v2_report.jsonl": "8ef36f2d0d148ae9e3ce2ced98e653a7b74d2e2d3f3ad7ca60759bd96b2d29b2",
+    "evaluation/results/development_grounded_generation_v2_summary.json": "0ceaa2dac6bc1954f9796bba39549d83f309913c04949c64e7736b63a1050735",
+    "evaluation/results/development_llm_answerability_report.jsonl": "08de139cbaf1fbea20defb40fd8a6143c95a6996fbeb5a92caf393d251320686",
+    "evaluation/results/development_llm_answerability_summary.json": "ddb91a3e245b1bcbf36f0e7c52f0937b7bdf049fbb346db96ca3fb770b68accc",
+    "evaluation/results/development_llm_answerability_v2_error_analysis.json": "89f9ded077f11464a9ff0637e06e86e3286c78595d62d1e1d1c956b899c959ea",
+    "evaluation/results/development_llm_answerability_v2_report.jsonl": "1586fe8d10ea89a94b54b920a9d62646b0144aa4b69213f0853f3710c545d535",
+    "evaluation/results/development_llm_answerability_v2_summary.json": "509aaee5e45d8f45580748c33813d7fcc9fca38c831fb11764084110ff11e820",
+    "evaluation/results/development_system_a_v1_report.jsonl": "5c42357eb33b60eb3954cb92a3a636fbcf58a842acd840d82f2e89c6bd98e1f7",
+    "evaluation/results/development_system_a_v1_summary.json": "4afb4d529fb51eff3f253fe6fca8593dc708c5895830288b32ca27d028a62f43",
+    "evaluation/results/development_system_b_v1_report.jsonl": "450fb93cff9e08f89691125dade4028179e540de9aab8ad6a5eb9e6e48968dc0",
+    "evaluation/results/development_system_b_v1_summary.json": "f91bc896648673b0cacfa57ebaf6699cb70b43d101645c32e7a67c96e81a568e",
+    "evaluation/results/development_system_comparison_final.json": "b3e13b5c72041cd756a32f5f9dfa43a3e3f699c2546394377b02e1716332d2f1",
+    "evaluation/results/development_threshold_selection.json": "f65a7347631807a1253b070b9fade5cd3f7ae8ea1aafa95d478e2285fb2319e8",
+    "evaluation/results/lexical_retrieval_report.jsonl": "4aca1922d1ee501017b7e2124586f475c9ed98c27571db3cca7ec265f70ab797",
+    "evaluation/results/lexical_retrieval_summary.json": "a8056e1c3858d5c3abc1a34b6a1c7381e2336de170000a9afe19e6e3962952cc",
+    "evaluation/results/retrieval_comparison.json": "749bee3e103a0a9ebd28cec6318a3beeb5488df5a334d9efcd09b4f8a0421220",
+    "evaluation/results/semantic_retrieval_report.jsonl": "17388a40c150260bb034a844fa64f549438fb4b6531e7a574ca963add70dd56e",
+    "evaluation/results/semantic_retrieval_summary.json": "cc4e411e2e6ce113ebfc9c0e9b68384c2f1c58230124eabdde86a79bbe61066e",
+    "evaluation/results/structured_retrieval_report.jsonl": "f49d2c3175f600fa93d868254b973c566978592042fef1914f0e91943bd92c53",
+    "evaluation/results/structured_retrieval_summary.json": "2eaf89ac13ffaa7643bf77c9e13b78a4f85f75813b1df26e7e82634cadb52d07",
+    "evaluation/results/three_way_retrieval_comparison.json": "79a2ac299c093c02091b8f22148c311fef11d8084358ebbabbf10ce870d5a89c",
+    "evaluation/system_comparison.py": "be38e8a2212aad8b90f2791b4fbe31de42732272f3c0918d217cd44e5bf9d54d",
+    "evaluation/threshold_selection.py": "461b7bb1b962e4f2c70f34791be728d318e2683b6817ce8fca5d5d6dd625b7da",
+    "scripts/evaluate_final_heldout.py": "e797dfe2913080d8bb7e9439befa255f9c5dc4e91437ff00d81657943341281f",
+    "scripts/freeze_final_protocol.py": "0087b35d7959a20443ca305434218a44559b3d4f2f410abff9c536d29679c11f"
+  },
+  "frozen_at_utc": "2026-09-05T07:24:48.235731+00:00",
+  "heldout": {
+    "evaluated": false,
+    "example_count": 45,
+    "path": "evaluation/heldout_benchmark.jsonl",
+    "sha256": "99eb8be69c33d1744ae15c8891bec5f7e963142e334172753b4fe39361947065"
+  },
+  "metrics": {
+    "abstention_precision": "correct full abstentions / valid abstentions",
+    "abstention_rate": "valid abstentions / all examples",
+    "abstention_recall": "correct full abstentions / should-abstain examples",
+    "answer_quality": [
+      "numeric/computation correctness",
+      "categorical/comparison correctness where typed",
+      "citation-ID validity",
+      "required-evidence coverage",
+      "unsupported factual claims where machine-checkable",
+      "partial-answer success"
+    ],
+    "automatic_semantic_score": false,
+    "cost_latency": [
+      "LLM calls including retries",
+      "calls avoided",
+      "input/cached-input/output tokens",
+      "estimated USD",
+      "mean/median generation latency",
+      "gate latency where instrumented"
+    ],
+    "coverage": "substantive answers / all examples",
+    "end_to_end_success": "correct supported answers plus correct abstentions / all examples; provider failures are failures",
+    "full_abstention_labels": [
+      "INSUFFICIENT_EVIDENCE",
+      "OUT_OF_SCOPE"
+    ],
+    "gate_only_reported_separately": true,
+    "partial_success": "supported portion answered, unsupported portion not falsely answered, and limitation explicitly conveyed",
+    "unsupported_answer_rate_on_should_abstain": "substantive answers to the unsupported requested claim / all examples labelled INSUFFICIENT_EVIDENCE or OUT_OF_SCOPE"
+  },
+  "model": {
+    "cached_input_usd_per_million": 0.1,
+    "max_attempts": 2,
+    "max_output_tokens": 1000,
+    "output_usd_per_million": 1.6,
+    "pricing_as_of": "2026-09-05",
+    "pricing_url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "provider": "openai_responses_api",
+    "snapshot": "gpt-4.1-mini-2025-04-14",
+    "standard_input_usd_per_million": 0.4,
+    "temperature": 0.0
+  },
+  "one_shot_policy": {
+    "command": "python scripts/evaluate_final_heldout.py --live",
+    "infrastructure_failure": "Preserve start marker and partial outputs; document cause before a separately versioned exceptional rerun is considered.",
+    "ordinary_overwrite_allowed": false,
+    "post_start_changes_allowed": []
+  },
+  "provider_failure_policy": {
+    "attempts_and_failures_retained": true,
+    "counts_as_correct_abstention": false,
+    "counts_as_end_to_end_success": false,
+    "counts_as_incorrect_factual_answer": false,
+    "separate_state": true
+  },
+  "research_question": "Is semantic relevance alone sufficient to decide whether a RAG system should answer, or does explicit evidence-sufficiency reasoning provide safer and more reliable behavior?",
+  "schema_version": 1,
+  "shared_retrieval": {
+    "answer_evidence_identical_across_systems": true,
+    "implementation": "frozen deterministic structured retriever"
+  },
+  "status": "FROZEN_NOT_RUN",
+  "system_a": {
+    "application_gate": "none",
+    "flow": "question -> structured retrieval -> baseline generation",
+    "id": "system_a_ungated_structured_rag_baseline_v1",
+    "model_may_abstain": true,
+    "prompt_sha256": "c4d00904dd052c6e0eae77f324d8b920167ce226c096da011e121eafd36bff19",
+    "prompt_version": "baseline_structured_evidence_generation_v1"
+  },
+  "system_b": {
+    "comparison": "score >= threshold",
+    "flow": "question -> structured retrieval -> maximum BGE cosine threshold -> shared baseline generation",
+    "id": "system_b_max_bge_threshold_structured_rag_baseline_v1",
+    "prompt_sha256": "c4d00904dd052c6e0eae77f324d8b920167ce226c096da011e121eafd36bff19",
+    "prompt_version": "baseline_structured_evidence_generation_v1",
+    "threshold": 0.6387588977813721,
+    "threshold_abstention_response": "generic; contains no deterministic diagnostics",
+    "zero_evidence": "score NONE; deterministic abstention; no generation call"
+  },
+  "system_c": {
+    "flow": "question -> structured interpretation/retrieval -> deterministic answerability -> deterministic computation -> grounded generation v2",
+    "full_abstention_calls_generation": false,
+    "id": "system_c_checkpoint_10_deterministic_evidence_aware_rag_v2",
+    "prompt_sha256": "1189ce7c6a8ec5ce76fa951189d0f2a7717279969b91917a3cd975d75fc5c3ac",
+    "prompt_version": "grounded_answer_generation_v2"
+  },
+  "threshold_selection": {
+    "candidate_artifact": "evaluation/results/development_threshold_selection.json",
+    "candidate_artifact_sha256": "f65a7347631807a1253b070b9fade5cd3f7ae8ea1aafa95d478e2285fb2319e8",
+    "candidate_generation": "nextafter below finite minimum, every unique finite observed score, nextafter above finite maximum; NONE always abstains",
+    "label_mapping": {
+      "ABSTAIN": [
+        "INSUFFICIENT_EVIDENCE",
+        "OUT_OF_SCOPE"
+      ],
+      "ALLOW": [
+        "ANSWERABLE",
+        "PARTIALLY_ANSWERABLE"
+      ]
+    },
+    "objective": "maximize binary macro F1 for ALLOW versus ABSTAIN",
+    "score_distribution": {
+      "abstain_max": 0.7735425233840942,
+      "abstain_min": 0.67622971534729,
+      "allow_max": 0.7784090638160706,
+      "allow_min": 0.6387588977813721,
+      "none_count": 5.0,
+      "overall_max": 0.7784090638160706,
+      "overall_min": 0.6387588977813721
+    },
+    "selected_abstention_recall": 0.4166666666666667,
+    "selected_binary_macro_f1": 0.6880570409982175,
+    "selected_threshold": 0.6387588977813721,
+    "split": "development_only_25_questions",
+    "tie_break_order": [
+      "higher abstention recall",
+      "higher threshold",
+      "earlier deterministic numeric candidate order"
+    ]
+  }
+}

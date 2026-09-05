@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "result": {
+    "resource_id": "fixture-region",
+    "fields": [
+      {"type": "text", "id": "DataSeries"},
+      {"type": "numeric", "id": "2021"},
+      {"type": "numeric", "id": "2020"},
+      {"type": "int4", "id": "_id"}
+    ],
+    "records": [
+      {"2020": "1000", "2021": "1010", "_id": 1, "DataSeries": "Central Region"},
+      {"2020": "50", "2021": "60", "_id": 2, "DataSeries": "    0 - 4 Years"},
+      {"2020": "490", "2021": "500", "_id": 3, "DataSeries": "Central Region (Male)"}
+    ],
+    "total": 3,
+    "limit": 1000
+  }
+}

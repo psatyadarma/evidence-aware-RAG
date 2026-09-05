@@ -1,0 +1,52 @@
+{
+  "analysis_type": "post_run_deterministic_taxonomy",
+  "evaluation_split": "development",
+  "prompt_version": "evidence_sufficiency_zero_shot_v2",
+  "result_report_sha256": "1586fe8d10ea89a94b54b920a9d62646b0144aa4b69213f0853f3710c545d535",
+  "result_summary_sha256": "509aaee5e45d8f45580748c33813d7fcc9fca38c831fb11764084110ff11e820",
+  "note": "This file refines error taxonomy without changing model outputs, derived predictions, or the single live-run artifacts.",
+  "errors": [
+    {
+      "id": "q013",
+      "outcome": "valid_incorrect_prediction",
+      "error_category": "source_caveat_failure",
+      "detail": "The model received the Master Plan 2014/2019 boundary qualification but treated the arithmetic difference as the true underlying population change."
+    },
+    {
+      "id": "q016",
+      "outcome": "valid_incorrect_prediction",
+      "error_category": "claim_decomposition_failure",
+      "detail": "The causal conclusion was correctly unsupported, but the descriptive comparison was incorrectly promoted from premise/context to a separately requested claim, producing PARTIALLY_ANSWERABLE."
+    },
+    {
+      "id": "q017",
+      "outcome": "valid_incorrect_prediction",
+      "error_category": "out_of_scope_failure",
+      "detail": "The model treated an in-domain unavailable year/granularity combination as an absent corpus domain and derived OUT_OF_SCOPE instead of INSUFFICIENT_EVIDENCE."
+    },
+    {
+      "id": "q018",
+      "outcome": "structured_output_failure",
+      "error_category": "evidence_relation_failure",
+      "detail": "The model used UNAVAILABLE for a missing year without a supplied NOT_AVAILABLE observation, so it could not provide the required ESTABLISHES_UNAVAILABILITY relation."
+    },
+    {
+      "id": "q020",
+      "outcome": "valid_incorrect_prediction",
+      "error_category": "out_of_scope_failure",
+      "detail": "The model treated an in-domain missing year at subzone granularity as OUT_OF_SCOPE rather than insufficient evidence."
+    },
+    {
+      "id": "q021",
+      "outcome": "structured_output_failure",
+      "error_category": "evidence_relation_failure",
+      "detail": "The model attached SUPPORTS to an unsupported requested claim instead of using the observations to contradict the directional premise."
+    },
+    {
+      "id": "q022",
+      "outcome": "structured_output_failure",
+      "error_category": "evidence_relation_failure",
+      "detail": "The model attached SUPPORTS to an unsupported requested claim and failed to use CONTRADICTS for the contradicted premise."
+    }
+  ]
+}

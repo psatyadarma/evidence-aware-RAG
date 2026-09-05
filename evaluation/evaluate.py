@@ -1,2 +1,1 @@
-"""Evaluation runner boundary; implementation is intentionally deferred."""
-
+"""System-evaluation runner boundary; no predictions are produced in Checkpoint 3."""

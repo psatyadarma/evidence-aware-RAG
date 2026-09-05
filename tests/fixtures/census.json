@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "result": {
+    "resource_id": "fixture-census",
+    "fields": [
+      {"type": "text", "id": "Number"},
+      {"type": "text", "id": "Total_Total"},
+      {"type": "text", "id": "Males_0_4"},
+      {"type": "int4", "id": "_id"}
+    ],
+    "records": [
+      {"_id": 1, "Number": "Total", "Total_Total": "4044210", "Males_0_4": "93390"},
+      {"_id": 2, "Number": "Tampines - Total", "Total_Total": "256000", "Males_0_4": "na"},
+      {"_id": 3, "Number": "Simei", "Total_Total": "42000", "Males_0_4": "900"}
+    ],
+    "total": 3,
+    "limit": 1000
+  }
+}
