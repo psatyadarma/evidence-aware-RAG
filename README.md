@@ -203,6 +203,8 @@ The project progressed from knowledge-boundary definition and deterministic inge
 
 ChatGPT/Codex assisted with repository scaffolding, coding, debugging, test support, documentation drafting, and experimental review. Human decisions controlled the problem framing, dataset selection, evaluation design, benchmark design, freeze decisions, system selection, one-shot held-out execution, and final interpretation and acceptance. Generated suggestions were reviewed against source data, executable tests, frozen artifacts, and observed outputs; AI assistance did not replace the documented experimental controls.
 
+The anonymized development chat history is available in under ai_logs.
+
 ## Reproducibility and supporting documentation
 
 - [Data knowledge boundary and licensing](data/README.md)
