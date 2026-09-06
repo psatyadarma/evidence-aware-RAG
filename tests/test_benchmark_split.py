@@ -159,7 +159,11 @@ def test_retrieval_evaluation_scripts_still_default_to_development() -> None:
         assert '"evaluation" / "benchmark.jsonl"' in source
         assert "heldout" not in source.casefold()
 
-    assert not list((PROJECT_ROOT / "evaluation" / "results").glob("*heldout*"))
+    # The accepted Checkpoint 12 one-shot run now owns held-out result artifacts;
+    # retrieval evaluation scripts must still remain development-only.
+    assert (
+        PROJECT_ROOT / "evaluation" / "results" / "final_heldout_run_completed.json"
+    ).is_file()
 
 
 def test_freeze_file_is_plain_reviewable_json() -> None:

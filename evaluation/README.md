@@ -41,8 +41,13 @@ Checkpoint 11 implements the ungated and scalar-threshold complete policies,
 selects the single threshold on development only, freezes the A/B/C comparison,
 and preregisters the one-shot final protocol. See
 [`FINAL_EVALUATION_PROTOCOL.md`](FINAL_EVALUATION_PROTOCOL.md). The dedicated
-final command exists but has not been executed; held-out performance remains
-unseen.
+final command was prepared but had not yet been executed at that checkpoint.
+
+After the Checkpoint 12 one-shot run, a post-hoc evaluation-only correction
+fixed System C metric semantics: explanatory deterministic refusal text is not
+a generated answer. The original raw and derived outputs remain immutable;
+new corrected artifacts and complete hashes are recorded in
+[`FINAL_HELDOUT_METRIC_CORRECTION.md`](FINAL_HELDOUT_METRIC_CORRECTION.md).
 
 ## Distribution
 

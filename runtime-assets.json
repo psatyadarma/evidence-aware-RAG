@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "selected_system": "system_c_checkpoint_10_deterministic_evidence_aware_rag_v2",
+  "expected_retrieval_unit_count": 27584,
+  "required_assets": [
+    {
+      "path": "data/processed/population_indicators_annual.jsonl",
+      "sha256": "832ad92a0fb93c641e183e72aa36f34c0aaecf30e858f3fa11bdc191f3a0d2ba",
+      "size_bytes": 197760
+    },
+    {
+      "path": "data/processed/residents_by_planning_region_annual.jsonl",
+      "sha256": "3ba62e74be7dfd67829a4cbe7e7901d44d94fdd0fe568160ae611cf1a99506f8",
+      "size_bytes": 346414
+    },
+    {
+      "path": "data/processed/resident_population_census_2020.jsonl",
+      "sha256": "f7cba6dd7e1bafe722f60f15bca6583a923db53ddd9c5c0e21f90ede7b48a440",
+      "size_bytes": 3069105
+    }
+  ],
+  "deliberately_excluded": [
+    "data/raw",
+    "data/embeddings",
+    "evaluation",
+    "tests"
+  ]
+}

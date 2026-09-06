@@ -107,5 +107,12 @@ def test_final_runner_is_the_only_runtime_entry_point_for_reserved_records() -> 
         assert "held-out benchmark" not in source
 
 
-def test_no_final_results_exist_before_one_shot_run() -> None:
-    assert not list((PROJECT_ROOT / "evaluation" / "results").glob("final_heldout_*"))
+def test_original_one_shot_markers_are_preserved() -> None:
+    results = PROJECT_ROOT / "evaluation" / "results"
+    started = json.loads((results / "final_heldout_run_started.json").read_text())
+    completed = json.loads((results / "final_heldout_run_completed.json").read_text())
+
+    assert started["status"] == "RUNNING"
+    assert completed["status"] == "COMPLETED"
+    assert started["protocol_sha256"] == sha256_file(PROTOCOL_PATH)
+    assert completed["protocol_sha256"] == sha256_file(PROTOCOL_PATH)
