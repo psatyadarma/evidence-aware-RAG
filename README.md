@@ -6,7 +6,7 @@ System C achieved 73.3% held-out end-to-end correctness versus 64.4% for System 
 
 ## Demo video
 
-`DEMO_VIDEO_URL_TODO`
+`[DEMO_VIDEO_URL_TODO](https://www.loom.com/share/e6455a46dccb40b9953f12b0d0291ffa)`
 
 ## Public-sector problem
 
